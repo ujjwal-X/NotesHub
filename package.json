@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ujjwal-X.github.io/NotesHub",
   "name": "firstapp",
+  "homepage": "https://ujjwal-X.github.io/firstapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
