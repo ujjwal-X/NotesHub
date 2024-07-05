@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Noteshub/static/css/main.a8f13f00.css",
+    "main.js": "/Noteshub/static/js/main.2f8a0714.js",
+    "static/media/books-2599241_1280.jpg": "/Noteshub/static/media/books-2599241_1280.7d13c289d45042041b8f.jpg",
+    "index.html": "/Noteshub/index.html",
+    "main.a8f13f00.css.map": "/Noteshub/static/css/main.a8f13f00.css.map",
+    "main.2f8a0714.js.map": "/Noteshub/static/js/main.2f8a0714.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8f13f00.css",
+    "static/js/main.2f8a0714.js"
+  ]
+}
