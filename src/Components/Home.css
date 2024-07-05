@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.bg-img {
+  background-image: url("../Images/books-2599241_1280.jpg");
+  background-position: center;
+}
+.middle {
+  height: 700px;
+  width: 100%;
+  text-align: center;
+  line-height: 400px;
+}
+
+.h-full {
+  height: 100vh !important;
+}
