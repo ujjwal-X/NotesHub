@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/firstapp/static/css/main.b9389baf.css",
-    "main.js": "/firstapp/static/js/main.2f8a0714.js",
-    "static/media/books-2599241_1280.jpg": "/firstapp/static/media/books-2599241_1280.7d13c289d45042041b8f.jpg",
-    "index.html": "/firstapp/index.html",
-    "main.b9389baf.css.map": "/firstapp/static/css/main.b9389baf.css.map",
-    "main.2f8a0714.js.map": "/firstapp/static/js/main.2f8a0714.js.map"
+    "main.css": "/NotesHub/static/css/main.c6615654.css",
+    "main.js": "/NotesHub/static/js/main.ff70d9b6.js",
+    "static/media/books-2599241_1280.jpg": "/NotesHub/static/media/books-2599241_1280.7d13c289d45042041b8f.jpg",
+    "index.html": "/NotesHub/index.html",
+    "main.c6615654.css.map": "/NotesHub/static/css/main.c6615654.css.map",
+    "main.ff70d9b6.js.map": "/NotesHub/static/js/main.ff70d9b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9389baf.css",
-    "static/js/main.2f8a0714.js"
+    "static/css/main.c6615654.css",
+    "static/js/main.ff70d9b6.js"
   ]
 }
