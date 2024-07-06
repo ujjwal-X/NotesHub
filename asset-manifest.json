@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/NotesHub/static/css/main.c6615654.css",
-    "main.js": "/NotesHub/static/js/main.2f8a0714.js",
+    "main.js": "/NotesHub/static/js/main.c4caed97.js",
+    "static/media/Notes-Hub.svg": "/NotesHub/static/media/Notes-Hub.7d06fbfbcac97420d062dea11e2eb184.svg",
     "static/media/books-2599241_1280.jpg": "/NotesHub/static/media/books-2599241_1280.7d13c289d45042041b8f.jpg",
     "index.html": "/NotesHub/index.html",
     "main.c6615654.css.map": "/NotesHub/static/css/main.c6615654.css.map",
-    "main.2f8a0714.js.map": "/NotesHub/static/js/main.2f8a0714.js.map"
+    "main.c4caed97.js.map": "/NotesHub/static/js/main.c4caed97.js.map"
   },
   "entrypoints": [
     "static/css/main.c6615654.css",
-    "static/js/main.2f8a0714.js"
+    "static/js/main.c4caed97.js"
   ]
 }
