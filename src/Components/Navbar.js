@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Logo from "../Images/Notes-Hub.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,11 @@ export default function Navbar() {
   return (
     <nav className="bg-black border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={`/${"Notes-Hub.svg"}`} className="h-16" alt="notes" />
+        <Link
+          to="/NotesHub"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src={Logo} className="h-16" alt="notes" />
         </Link>
         <button
           onClick={toggleMenu}
@@ -46,7 +50,7 @@ export default function Navbar() {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 sm:bg-black">
             <li>
               <Link
-                to="/"
+                to="/NotesHub"
                 className="block py-2 px-3 bg-black-700 rounded md:bg-black md:text-white-700 md:p-0 dark:text-white md:dark:text-blue-500 text-white hover:text-logoColor text-base sm:bg-black sm:p-5 text-center"
                 aria-current="page"
               >

@@ -22,7 +22,7 @@ const appRouter = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "",
+        path: "/NotesHub",
         element: <Home />,
       },
       {
@@ -64,8 +64,6 @@ const appRouter = createBrowserRouter([
 ]);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={appRouter}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={appRouter} />
   </React.StrictMode>
 );
