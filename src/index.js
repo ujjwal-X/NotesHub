@@ -22,7 +22,7 @@ const appRouter = HashRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/NotesHub",
+        path: "/",
         element: <Home />,
       },
       {

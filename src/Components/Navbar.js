@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="bg-black border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
-          to="/NotesHub"
+          to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src={Logo} className="h-16" alt="notes" />
