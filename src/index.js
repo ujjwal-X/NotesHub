@@ -12,10 +12,10 @@ import Neet from "./Components/Class/Neet";
 import Twelth from "./Components/Class/Twelth";
 import ContactUs from "./Components/ContactUs";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, RouterProvider } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const appRouter = createBrowserRouter([
+const appRouter = HashRouter([
   {
     path: "/",
     element: <App />,
@@ -63,8 +63,8 @@ const appRouter = createBrowserRouter([
   },
 ]);
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={appRouter}>
-    </RouterProvider>
-  </React.StrictMode>
+
+    <RouterProvider router={appRouter}/>
+   
+ 
 );
