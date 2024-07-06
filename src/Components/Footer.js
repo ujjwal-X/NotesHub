@@ -9,11 +9,9 @@ function Footer() {
         <div className="text-white mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="text-white md:flex md:justify-between">
             <div className="text-white mb-6 md:mb-0">
-              <Link className="text-white flex items-center">
+              <Link className="text-white flex items-center" to="/">
                 <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <Link className="text-white flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src={Logo} className="text-white h-14" alt="notes" />
-                  </Link>
+                  <img src={Logo} className="text-white h-14" alt="notes" />
                 </span>
               </Link>
             </div>
