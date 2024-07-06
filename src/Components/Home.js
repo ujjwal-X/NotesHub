@@ -28,7 +28,7 @@ function Home() {
             >
               <img
                 src={"c2.jpg"}
-                className="absolute block w-full  h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  object-cover;"
+                className="absolute block w-full  h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;"
                 alt="..."
               />
             </div>
@@ -39,7 +39,7 @@ function Home() {
             >
               <img
                 src={"c3.jpg"}
-                className="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  object-cover"
+                className="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
@@ -48,7 +48,6 @@ function Home() {
               <img
                 src={"c4.jpg"}
                 className="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                object-cover
                 alt="..."
               />
             </div>
@@ -56,7 +55,7 @@ function Home() {
             <div className="hidden duration-200 ease-linear" data-carousel-item>
               <img
                 src={"c5.jpg"}
-                className="absolute block w-full  h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  object-cover"
+                className="absolute block w-full  h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                 alt="..."
               />
             </div>
@@ -77,9 +76,9 @@ function Home() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M5 1 1 5l4 4"
                 />
               </svg>
@@ -101,9 +100,9 @@ function Home() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m1 9 4-4-4-4"
                 />
               </svg>

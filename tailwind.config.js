@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
-
+  entry: "./src/index.js",
+  module: {
+    rules: [
+      //...
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        type: "asset/resource",
+      },
+    ],
+  },
   theme: {
     colors: {
       transparent: "transparent",
