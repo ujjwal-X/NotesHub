@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../Images/Notes-Hub.svg";
 
 function Footer() {
   return (
@@ -11,7 +10,11 @@ function Footer() {
             <div className="text-white mb-6 md:mb-0">
               <Link className="text-white flex items-center" to="/">
                 <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <img src={Logo} className="text-white h-14" alt="notes" />
+                  <img
+                    src={"Notes-Hub transparent.png"}
+                    className="text-white h-14"
+                    alt="notes"
+                  />
                 </span>
               </Link>
             </div>

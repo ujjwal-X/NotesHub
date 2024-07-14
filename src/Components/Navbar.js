@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Logo from "../Images/Notes-Hub.svg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +16,7 @@ export default function Navbar() {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={Logo} className="h-16" alt="notes" />
+          <img src={"Notes-Hub transparent.png"} className="h-16" alt="notes" />
         </Link>
         <button
           onClick={toggleMenu}

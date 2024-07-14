@@ -61,11 +61,11 @@ main {
 .help-layout nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
   margin: 30px 0;
 }
 .help-layout nav a {
-  width: 150px;
+  width: 100px;
 
   text-align: center;
   padding: 10px;
@@ -76,6 +76,7 @@ main {
 }
 .help-layout nav a:hover {
   border-color: var(--primary);
+  border: 2px solid black;
 }
 .help-layout nav a.active {
   background: var(--primary);
