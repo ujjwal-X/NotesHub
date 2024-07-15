@@ -4,7 +4,7 @@ import "./Home.css";
 
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slides = ["c1.jpg", "c2.jpg", "c3.jpg"]; // Add your image paths here
+  const slides = ["c1.webp", "c4.webp", "c5.webp"]; // Add your image paths here
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,6 +12,30 @@ function Home() {
     }, 8000); // Change slide every 5 seconds
     return () => clearInterval(interval);
   }, [slides.length]);
+
+  const [text, setText] = useState("Free Content for Studnets");
+
+  useEffect(() => {
+    const texts = [
+      "10th 11th 12th ",
+      "BTech",
+      "Compitative Examination",
+      "And Many More",
+    ];
+    let currentIndex = 0;
+
+    const changeText = () => {
+      setText(texts[currentIndex]);
+      currentIndex = (currentIndex + 1) % texts.length;
+    };
+
+    changeText();
+
+    const intervalId = setInterval(changeText, 4000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
@@ -58,11 +82,28 @@ function Home() {
           </ol>
         </div>
       </div>
+      <div className="section2">
+        <div>
+          <h1 className="sec2-text">
+            Our Main <span className="yellow">AIM</span> To Give &nbsp;
+            <span className="blue">Free</span> Notes and Books
+          </h1>
+          <h2 className="sec2-text">
+            Stay <span className="blue">Connected</span> For more{" "}
+            <span className="yellow">Updates</span>{" "}
+          </h2>
+        </div>
 
-      <div className="bg-img h-full ">
-        <h1 className="shadow-2xl font-bold text-white text-center text-4xl middle sm:text-center ">
-          Welcome to Notes <span className="text-logoColor bg-black">HUB</span>
-        </h1>
+        <div class="container">
+          <span class="text first-text">Content We have&nbsp;</span>
+          <span class="text sec-text">{text}</span>
+        </div>
+        <div>
+          <h1 className="sec2-text">
+            For <span className="yellow">Content</span> Check Out{" "}
+            <span className="blue">NavBar</span>
+          </h1>
+        </div>
       </div>
     </>
   );
