@@ -1,10 +1,14 @@
 import React from "react";
-import CommingSoon from "../Constants/CommingSoon";
+import Data from "../Api";
 
 function Jee() {
   return (
     <>
-      <CommingSoon />
+      <div className="wrapper">
+        {tenthData.map((item) => {
+          return <Card {...item} key={item.id} />;
+        })}
+      </div>
     </>
   );
 }

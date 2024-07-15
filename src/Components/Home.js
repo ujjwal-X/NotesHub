@@ -88,7 +88,7 @@ function Home() {
             Our Main <span className="yellow">AIM</span> To Give &nbsp;
             <span className="blue">Free</span> Notes and Books
           </h1>
-          <h2 className="sec2-text">
+          <h2 className="sec2-text ">
             Stay <span className="blue">Connected</span> For more{" "}
             <span className="yellow">Updates</span>{" "}
           </h2>
@@ -99,9 +99,11 @@ function Home() {
           <span class="text sec-text">{text}</span>
         </div>
         <div>
-          <h1 className="sec2-text">
+          <h1 className="sec2-text text2">
             For <span className="yellow">Content</span> Check Out{" "}
-            <span className="blue">NavBar</span>
+            <span className="blue">NavBar</span> For Content{" "}
+            <span className="yellow">Removal</span> Go On{" "}
+            <span className="blue">Contant Us</span> Page
           </h1>
         </div>
       </div>
