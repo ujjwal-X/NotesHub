@@ -1,3 +1,8 @@
+.section1 {
+  font-family: "Poppins", sans-serif;
+  background: #010718;
+}
+
 .carousel {
   margin: 0;
   padding: 0;
@@ -80,7 +85,7 @@
 
 .carousel-bullet {
   color: #fff;
-  font-size: 35px;
+  font-size: 1.6rem;
 }
 
 .carousel-bullet.active,
@@ -124,12 +129,12 @@
   padding: 10%;
 }
 .sec2-text {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 5rem;
 }
 .container {
-  height: 50vh;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +146,7 @@
 .container .text {
   position: relative;
   color: #4070f4;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 

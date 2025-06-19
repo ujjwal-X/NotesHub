@@ -1,12 +1,12 @@
 import React from "react";
-import CommingSoon from "./Constants/CommingSoon";
+import "./ContactUs.css"; // Import the CSS file
 
-function ContactUs() {
+const ContactUs = () => {
   return (
     <>
-      <CommingSoon />
+      <div>Contact Us</div>
     </>
   );
-}
+};
 
 export default ContactUs;

@@ -1,10 +1,10 @@
 import React from "react";
-import Error from "../Error";
+import CommingSoon from "../Constants/CommingSoon";
 
 function Jee() {
   return (
     <>
-      <Error />
+      <CommingSoon />
     </>
   );
 }

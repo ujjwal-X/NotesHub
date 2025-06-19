@@ -11,7 +11,7 @@ function Footer() {
               <Link className="text-white flex items-center" to="/">
                 <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                   <img
-                    src={"Notes-Hub transparent.png"}
+                    src={"/Notes-Hub transparent.png"}
                     className="text-white h-14"
                     alt="notes"
                   />

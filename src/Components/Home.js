@@ -3,6 +3,27 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 
 function Home() {
+  // counter up logic
+  const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    // Set an interval to update the count every 50 milliseconds
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        // If the count is less than 95, increment
+        if (prevCount < 95) {
+          return prevCount + 1;
+        } else {
+          // If the count reaches 95, clear the interval
+          clearInterval(interval);
+          return prevCount;
+        }
+      });
+    }, 100);
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+  // crousel slider
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = ["c1.webp", "c4.webp", "c5.webp"]; // Add your image paths here
 
@@ -12,7 +33,7 @@ function Home() {
     }, 8000); // Change slide every 5 seconds
     return () => clearInterval(interval);
   }, [slides.length]);
-
+  // type writing text animation
   const [text, setText] = useState("Free Content for Studnets");
 
   useEffect(() => {
@@ -39,6 +60,27 @@ function Home() {
 
   return (
     <>
+      <div className="section1 p-10">
+        <h1 className="text-5xl mt-10 ml-10 font-semibold">
+          Collaborate, Learn, and
+        </h1>
+        <h1 className="text-5xl mt-5 ml-10 font-semibold">Grow Together</h1>
+        <h3 className="text-2xl mt-8 ml-10">
+          Welcome to{" "}
+          <span className="font-semibold">
+            Notes <span className="text-logoColor">Hub!</span>
+          </span>{" "}
+        </h3>
+        <div className="mt-8 ml-10 text-3xl">
+          <h1>{count}+ Resuources and Resourses </h1>
+        </div>
+        <h4 className="text-lg mt-10 ml-10 text-gray-600">
+          NotesHub is a free, online learning platform designed to help students
+        </h4>
+        <h4 className="text-lg ml-10 text-gray-600">
+          connect, learn, and grow together.
+        </h4>
+      </div>
       <div className="carousel">
         <div className="carousel-inner">
           {slides.map((slide, index) => (

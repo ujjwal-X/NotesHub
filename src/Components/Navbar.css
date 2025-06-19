@@ -1,1 +1,10 @@
-
+.font-extrabold:hover {
+  color: #ff9900 !important;
+}
+.bg {
+  background-color: grey;
+}
+.bg:hover {
+  background-color: black;
+  color: white;
+}

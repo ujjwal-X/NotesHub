@@ -39,7 +39,7 @@ body {
 
 .card {
   overflow: hidden;
-  box-shadow: 0 2px 20px var(--clr-gray300);
+  box-shadow: 0 2px 5px var(--clr-gray300);
   border-radius: var(--radius);
   display: flex;
   justify-content: center;
