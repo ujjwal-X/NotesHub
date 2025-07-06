@@ -1,7 +1,8 @@
+import Error from "../Error";
 const Third = () => {
   return (
     <div>
-      <h1>First</h1>
+      <Error />
     </div>
   );
 };

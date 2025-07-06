@@ -1,10 +1,10 @@
+import Error from "../Error";
+
 const First = () => {
   return (
     <>
       <div className="wrapper">
-        {tenthData.map((item) => {
-          return <Card {...item} key={item.id} />;
-        })}
+        <Error />
       </div>
     </>
   );
