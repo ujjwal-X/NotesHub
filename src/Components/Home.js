@@ -68,12 +68,16 @@ function Home() {
         <h3 className="text-2xl mt-8 ml-10">
           Welcome to{" "}
           <span className="font-semibold">
-            Notes <span className="text-logoColor">Hub!</span>
+            Notes{" "}
+            <span className="text-logoColor font-extrabold text-3xl">Hub!</span>
           </span>{" "}
         </h3>
         <div className="mt-8 ml-10 text-3xl">
           <h1>
-            <span className="text-logoColor">{count}+</span> Resuources and
+            <span className="text-logoColor font-extrabold text-3xl">
+              {count}+
+            </span>{" "}
+            Resuources and
           </h1>
         </div>
         <h4 className="text-lg mt-10 ml-10 text-gray-600">

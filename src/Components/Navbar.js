@@ -61,7 +61,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Link
             to="/login"
-            className="bg-logoColor text-black font-bold px-4 py-2 rounded hover:bg-opacity-90 transition"
+            className="bg-logoColor text-black font-bold px-4 py-2 rounded hover:bg-opacity-90 hover:bg-black hover:text-white transition hover:shadow-[0_0_10px_2px_white]"
           >
             Login
           </Link>
