@@ -87,7 +87,7 @@ function Home() {
           connect, learn, and grow together.
         </h4>
       </div>
-      <div className="carousel p-10">
+      <div className="carousel">
         <div className="carousel-inner">
           {slides.map((slide, index) => (
             <div
