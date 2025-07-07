@@ -60,7 +60,7 @@ function Home() {
 
   return (
     <>
-      <div className="section1 p-20 sm:p-20 md:p-20">
+      <div className="section1 p-10 ">
         <h1 className="text-5xl mt-10 ml-10 font-semibold">
           Collaborate, Learn, and
         </h1>
@@ -83,7 +83,7 @@ function Home() {
           connect, learn, and grow together.
         </h4>
       </div>
-      <div className="carousel p-20">
+      <div className="carousel p-10">
         <div className="carousel-inner">
           {slides.map((slide, index) => (
             <div
