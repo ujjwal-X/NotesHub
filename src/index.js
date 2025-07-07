@@ -11,7 +11,7 @@ import Tenth from "./Components/Class/Tenth";
 import Jee from "./Components/Class/Jee";
 import Neet from "./Components/Class/Neet";
 import Twelth from "./Components/Class/Twelth";
-import ContactUs from "./Components/ContactUs";
+import Login from "./LoginPage/Login";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import First from "./Components/College/First";
@@ -79,8 +79,8 @@ const appRouter = createBrowserRouter([
         element: <Compitative />,
       },
       {
-        path: "/contact",
-        element: <ContactUs />,
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

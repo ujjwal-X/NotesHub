@@ -60,7 +60,7 @@ function Home() {
 
   return (
     <>
-      <div className="section1 p-10">
+      <div className="section1 p-20 sm:p-20 md:p-20">
         <h1 className="text-5xl mt-10 ml-10 font-semibold">
           Collaborate, Learn, and
         </h1>
@@ -72,7 +72,9 @@ function Home() {
           </span>{" "}
         </h3>
         <div className="mt-8 ml-10 text-3xl">
-          <h1>{count}+ Resuources and Resourses </h1>
+          <h1>
+            <span className="text-logoColor">{count}+</span> Resuources and
+          </h1>
         </div>
         <h4 className="text-lg mt-10 ml-10 text-gray-600">
           NotesHub is a free, online learning platform designed to help students
@@ -81,7 +83,7 @@ function Home() {
           connect, learn, and grow together.
         </h4>
       </div>
-      <div className="carousel">
+      <div className="carousel p-20">
         <div className="carousel-inner">
           {slides.map((slide, index) => (
             <div

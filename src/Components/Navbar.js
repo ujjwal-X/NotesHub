@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,91 +10,131 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-black dark:bg-gray-900 border-b-4 border-logoColor">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link
-          to="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+    <nav className="relative bg-black dark:bg-gray-900 border-b-4 border-logoColor">
+      <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between h-20 relative">
+        {/* Left: Logo */}
+        <Link to="/" className="flex items-center space-x-3">
           <img
             src={"/Notes-Hub transparent.png"}
             className="h-16"
             alt="notes"
           />
         </Link>
+
+        {/* Center: Nav Links */}
+        <ul className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
+          <li>
+            <Link
+              to="/"
+              className="text-white hover:text-logoColor font-extrabold text-base"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/school"
+              className="text-white hover:text-logoColor font-extrabold text-base"
+            >
+              School
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/college"
+              className="text-white hover:text-logoColor font-extrabold text-base"
+            >
+              College
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/Compitative"
+              className="text-white hover:text-logoColor font-extrabold text-base"
+            >
+              Competitive
+            </Link>
+          </li>
+        </ul>
+
+        {/* Right: Login */}
+        <div className="hidden md:flex">
+          <Link
+            to="/login"
+            className="bg-logoColor text-black font-bold px-4 py-2 rounded hover:bg-opacity-90 transition"
+          >
+            Login
+          </Link>
+        </div>
+
+        {/* Hamburger Menu (Mobile) */}
         <button
           onClick={toggleMenu}
-          type="button"
-          className="bg inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded={isOpen ? "true" : "false"}
+          className="md:hidden text-gray-400 hover:text-white focus:outline-none"
         >
-          <span className="sr-only">Open main menu</span>
           <svg
-            className="w-5 h-5 "
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
             fill="none"
-            viewBox="0 0 17 14"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
           >
             <path
-              stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
+              d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
         </button>
-        <div
-          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
-          id="navbar-default"
-        >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 sm:bg-black">
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden px-4 pb-4">
+          <ul className="flex flex-col space-y-2 text-white">
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 bg-black-700 rounded md:bg-black md:text-white-700 md:p-0 dark:text-white md:dark:text-blue-500 text-white hover:text-logoColor text-base sm:bg-black sm:p-5 text-center"
-                aria-current="page"
+                className="block py-2 hover:text-logoColor font-extrabold"
               >
-                <span className="font-extrabold">Home</span>
+                Home
               </Link>
             </li>
             <li>
               <Link
                 to="/school"
-                className="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 sm:hover:text-logoColor text-base md:p-0 md:hover:text-logoColor dark:text-white text-white text-center sm:p-5"
+                className="block py-2 hover:text-logoColor font-extrabold"
               >
-                <span className="font-extrabold">School</span>
+                School
               </Link>
             </li>
             <li>
               <Link
                 to="/college"
-                className="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 text-base md:p-0 sm:hover:text-logoColor text-white md:hover:text-logoColor text-center sm:p-5"
+                className="block py-2 hover:text-logoColor font-extrabold"
               >
-                <span className="font-extrabold">College</span>
+                College
               </Link>
             </li>
             <li>
               <Link
                 to="/Compitative"
-                className="block py-2 px-3 rounded md:border-0 md:hover:text-logoColor text-base md:p-0 md:hover:bg-transparent text-white sm:hover:text-logoColor text-center sm:p-5"
+                className="block py-2 hover:text-logoColor font-extrabold"
               >
-                <span className="font-extrabold">Competitive Examination</span>
+                Competitive
               </Link>
             </li>
             <li>
               <Link
-                to="./contact"
-                className="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:hover:text-logoColor text-base md:p-0 sm:hover:text-logoColor text-white text-center sm:p-5"
+                to="/login"
+                className="block py-2 hover:text-logoColor font-extrabold"
               >
-                <span className="font-extrabold">Contact Us</span>
+                Login
               </Link>
             </li>
           </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 }
