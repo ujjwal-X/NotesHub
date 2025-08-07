@@ -1,7 +1,7 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
-export default function Login() {
+const Login = () => {
   return (
     <section>
       {/* Background grid spans */}
@@ -24,7 +24,7 @@ export default function Login() {
             </div>
             <div className="links">
               <a href="#">Forgot Password</a>
-              <a href="#">Signup</a>
+              <Link to="/signup">Signup</Link>
             </div>
             <div className="inputBox">
               <input type="submit" value="Login" />
@@ -34,4 +34,6 @@ export default function Login() {
       </div>
     </section>
   );
-}
+};
+
+export default Login;

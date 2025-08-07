@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import Loader from "./Components/Loader/loader"; // ✅ Adjust path if needed
+import Header from "./component/Navbar";
+import Footer from "./component/Footer";
+import Loader from "./component/loader/loader"; // ✅ Adjust path if needed
 
 function App() {
   const [loading, setLoading] = useState(true);
