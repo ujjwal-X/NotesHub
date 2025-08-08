@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  function submitValues() {}
   return (
     <section>
       {/* Background grid spans */}
@@ -16,7 +22,7 @@ const Login = () => {
           <div className="form">
             <div className="inputBox">
               <input type="text" required />
-              <i>Username</i>
+              <i>Email or Username</i>
             </div>
             <div className="inputBox">
               <input type="password" required />
@@ -27,7 +33,7 @@ const Login = () => {
               <Link to="/signup">Signup</Link>
             </div>
             <div className="inputBox">
-              <input type="submit" value="Login" />
+              <input type="submit" value="Login" onClick={submitValues()} />
             </div>
           </div>
         </div>

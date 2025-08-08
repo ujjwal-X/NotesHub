@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import "./Login.css";
 import { useState } from "react";
@@ -53,48 +52,6 @@ const Signup = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setError("");
-
-  //   const { fullName, email, username, password, confirmPassword } = formData;
-
-  //   // Validation
-  //   if (!fullName || !email || !username || !password || !confirmPassword) {
-  //     setError("All fields are required");
-  //     return;
-  //   }
-
-  //   if (password !== confirmPassword) {
-  //     setError("Passwords do not match");
-  //     return;
-  //   }
-
-  //   try {
-  //     const res = await axios.post(
-  //       "https://noteshub-backend-n7pt.onrender.com/api/auth/signup",
-  //       {
-  //         fullName,
-  //         email,
-  //         username,
-  //         password,
-  //       }
-  //     );
-  //     alert("Signup successful!");
-  //     setFormData({
-  //       fullName: "",
-  //       email: "",
-  //       username: "",
-  //       password: "",
-  //       confirmPassword: "",
-  //     });
-  //     console.log(res.data);
-  //   } catch (err) {
-  //     console.error(err);
-  //     setError("Signup failed. Try again.");
-  //   }
-  // };
 
   return (
     <section>
