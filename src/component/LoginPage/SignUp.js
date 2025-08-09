@@ -1,8 +1,13 @@
 import axios from "axios";
 import "./Login.css";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -12,30 +17,39 @@ const Signup = () => {
   });
 
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e?.preventDefault();
 
+    // Password match check
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match.");
       return;
     }
 
     try {
+      setLoading(true);
+      setError("");
+
       const payload = {
         name: formData.fullName,
         email: formData.email,
         password: formData.password,
       };
 
-      const response = await axios.post(
+      await axios.post(
         "https://noteshub-backend-n7pt.onrender.com/api/auth/signup",
         payload
       );
 
-      alert("Signup successful!");
+      // Show success toast
+      toast.success("Signup successful! Please login", {
+        position: "top-right",
+        autoClose: 3000,
+      });
 
-      // Optionally reset fields
+      // Reset form
       setFormData({
         fullName: "",
         email: "",
@@ -43,9 +57,21 @@ const Signup = () => {
         password: "",
         confirmPassword: "",
       });
-      setError("");
+
+      // Redirect after toast
+      setTimeout(() => {
+        navigate("/login");
+      }, 3200);
     } catch (error) {
-      setError(error.response?.data?.message || "Something went wrong.");
+      const message = error.response?.data?.message || "Something went wrong.";
+      setError(message);
+      // Show error toast
+      toast.error(message, {
+        position: "top-right",
+        autoClose: 4000,
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -55,16 +81,19 @@ const Signup = () => {
 
   return (
     <section>
-      {/* Background grid spans */}
+      <ToastContainer /> {/* Toast notification container */}
+      {/* Background grid */}
       {Array.from({ length: 300 }).map((_, i) => (
         <span key={i}></span>
       ))}
-
       {/* Sign Up Form */}
       <div className="signin">
         <div className="content">
           <h2>Sign Up</h2>
+
           <div className="form">
+            {error && <p style={{ color: "red", fontSize: "14px" }}>{error}</p>}
+
             <div className="inputBox">
               <input
                 type="text"
@@ -75,6 +104,7 @@ const Signup = () => {
               />
               <i>Full Name</i>
             </div>
+
             <div className="inputBox">
               <input
                 type="email"
@@ -85,6 +115,7 @@ const Signup = () => {
               />
               <i>Email</i>
             </div>
+
             <div className="inputBox">
               <input
                 type="text"
@@ -95,6 +126,7 @@ const Signup = () => {
               />
               <i>Username</i>
             </div>
+
             <div className="inputBox">
               <input
                 type="password"
@@ -105,6 +137,7 @@ const Signup = () => {
               />
               <i>Password</i>
             </div>
+
             <div className="inputBox">
               <input
                 type="password"
@@ -115,12 +148,18 @@ const Signup = () => {
               />
               <i>Confirm Password</i>
             </div>
+
             <div className="links">
-              <a href="#">Already have an account?</a>
-              <a href="#">Login</a>
+              <Link to="/login">Already have an account? Login</Link>
             </div>
+
             <div className="inputBox">
-              <input type="submit" value="Register" onClick={handleSubmit} />
+              <input
+                type="submit"
+                value={loading ? "Registering..." : "Register"}
+                onClick={handleSubmit}
+                disabled={loading}
+              />
             </div>
           </div>
         </div>
