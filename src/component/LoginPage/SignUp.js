@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -38,10 +39,7 @@ const Signup = () => {
         password: formData.password,
       };
 
-      await axios.post(
-        "https://noteshub-backend-n7pt.onrender.com/api/auth/signup",
-        payload
-      );
+      await axios.post(`${API_BASE_URL}/api/auth/signup`, payload);
 
       // Show success toast
       toast.success("Signup successful! Please login", {

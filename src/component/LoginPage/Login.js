@@ -13,6 +13,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   // Simple email validation regex
   const isValidEmail = (email) => {
@@ -41,14 +42,11 @@ const Login = () => {
       return;
     }
     try {
-      const response = await fetch(
-        "https://noteshub-backend-n7pt.onrender.com/api/auth/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       if (!response.ok) {
         const data = await response.json();

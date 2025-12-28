@@ -10,7 +10,7 @@
 }
 
 /* From Uiverse.io by 212004ALJI */
-button,
+/* button,
 button::after {
   padding: 10px 50px;
   font-size: 20px;
@@ -112,4 +112,4 @@ button:hover {
     clip-path: var(--move1);
     transform: translate(0);
   }
-}
+} */
